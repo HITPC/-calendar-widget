@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日历记事</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <div class="text-container">
+    <div class="text-item">
+      <label for="forWhat" class="for-what-label">For:</label>
+      <input type="text" id="forWhat" class="for-what-input" placeholder="请输入主题">
+    </div>
+    <div class="text-item">
+      <span>上次违反日期：<span id="lastDate"></span></span>
+    </div>
+    <div class="text-item">
+      <span>距今已经：<span id="howManyDays"></span></span>
+    </div>
+    <div class="text-item">
+      <span>最长纪录：<span id="longestRecord"></span></span>
+    </div>
+  </div>
+  
+  <div class="calendar-container">
+    <div class="calendar-controls-container">
+      <button class="left base-btn" id="prev">←</button>
+      <p class="now" id="selectedDay">2023-11-11</p>
+      <button class="right base-btn" id="next">→</button>
+    </div>
+    <div class="calendar-main" id="calendar">
+      <div class="calendar-row">
+        <div class="calendar-item">周一</div>
+        <div class="calendar-item">周二</div>
+        <div class="calendar-item">周三</div>
+        <div class="calendar-item">周四</div>
+        <div class="calendar-item">周五</div>
+        <div class="calendar-item">周六</div>
+        <div class="calendar-item">周日</div>
+      </div>
+      <div class="calendar-row"></div>
+      <div class="calendar-row"></div>
+      <div class="calendar-row"></div>
+      <div class="calendar-row"></div>
+      <div class="calendar-row"></div>
+    </div>
+  </div>
+
+  <div class="violate-container">
+    <button id="violate">违反</button>
+  </div>
+</body>
+<script src="./index.js" type="module"></script>
+</html>
