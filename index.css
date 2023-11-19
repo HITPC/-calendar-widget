@@ -108,7 +108,7 @@ html, body{
   align-items: center;
   flex-wrap: wrap;
   align-content: flex-start;
-  border: 1px solid rgb(58, 58, 58);
+  border: 1px solid rgba(58, 58, 58, .4);
   border-radius: 10px;
 }
 
@@ -126,6 +126,23 @@ html, body{
   justify-content: center;
   align-items: center;
   width: 12%;
+}
+
+.calendar-date{
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.calendar-date:hover, .calendar-date-focus{
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.calendar-date-selected{
+  border: 1px dashed rgba(0, 0, 0, .5);
+}
+
+.calendar-date-violate{
+  border: 1px solid red;
 }
 
 .violate-container{

@@ -57,3 +57,20 @@ export const beApartDays = (Date_start, Date_end = new Date()) => {
   //计算当前时间与结束时间之间相差天数
   return Math.abs(diff) / (24 * 60 * 60 * 1000);
 };
+
+/**
+ * @param dateArray {year:string,mouth:string,day:string}[]
+ * @returns 排好序的数组
+ */
+export function sortDates(dateArray) {
+  dateArray.sort(function(a, b) {
+      if (a.year !== b.year) {
+          return b.year - a.year; // 年份越大越靠前
+      } else if (a.mounth !== b.mounth) {
+          return b.mounth - a.mounth; // 同年份比较月份，月份越大越靠前
+      } else {
+          return b.day - a.day; // 同年份同月份比较日期，日期越大越靠前
+      }
+  });
+  return dateArray;
+}
